@@ -37,6 +37,8 @@ public class ProductService {
         String id = product.getId();
         if (id != null && !id.isEmpty()) {
             products.put(id, product);
+        } else {
+            throw new IllegalArgumentException("Can I has ID");
         }
     }
 
